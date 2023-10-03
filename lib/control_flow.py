@@ -2,7 +2,7 @@
 
 def admin_login(username, password):
     # your code here
-    if username == "admin" or username == "ADMIN":
+    if (username == "admin" or username == "ADMIN") and password == "12345":
         return "Access granted"
     else:
         return "Access denied"
@@ -11,27 +11,16 @@ def hows_the_weather(temperature):
     # your code here
     response = None
     if temperature < 40:
-        return "brisk"
+        response = "brisk"
     elif temperature >=40 and temperature <=65:
-        return "a little chilly"
+        response = "a little chilly"
     elif temperature > 85:
-        return "It's too dang hot out there!"
+        response = "too dang hot"
     else :
-        return "It's perfect out there!"
+        response = "perfect"
+    return f"It's {response} out there!"
     
-# function howsTheWeather(temperature) {
-#   let response;
-#   if (temperature < 40) {
-#     response = "brisk";
-#   } else if (temperature >= 40 && temperature <= 65) {
-#     response = "a little chilly";
-#   } else if (temperature > 85) {
-#     response = "too dang hot";
-#   } else {
-#     response = "perfect";
-#   }
-#   return `It's ${response} out there!`;
-# }
+
 def fizzbuzz(num):
     # your code here
     if  num % 3 == 0 and num % 5 == 0:
@@ -41,7 +30,7 @@ def fizzbuzz(num):
     elif num % 5 == 0:
         return "Buzz"
     else:
-        return "num"
+        return num
 
 
 
